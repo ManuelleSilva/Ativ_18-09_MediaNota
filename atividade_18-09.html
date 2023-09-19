@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MédiaAritmética-Nota></title>
+</head>
+<body>
+    <h1>Calculando a média aritmética dos seus alunos</h1>
+    <div id=mediaaluno> </div>
+        <script>
+            let nome_prof = prompt('Qual o nome do professor?')
+            let nome_Aluno = prompt('Qual o nome do seu aluno?')
+            let nota1 = Number(prompt('Qual é a primeira nota do seu aluno?'))
+            let nota2 = Number(prompt('Qual é a segunda nota do seu aluno?'))
+            let nota3 = Number(prompt('Qual é a terceira nota do seu aluno?'))
+
+            let mediaaluno = ((nota1+nota2+nota3)/3).toFixed(2)
+
+            if (mediaaluno <4)
+                retorno = "Reprovado"
+            else if(mediaaluno <6)
+                retorno = "Em recuperação"
+            else if(mediaaluno <11)
+                retorno = "Aprovado"
+            else
+                retorno = "Está média não é válida"
+
+            document.getElementById("mediaaluno").innerHTML = "Aluno: " + nome_Aluno + "<br> Professor: " + nome_prof + 
+            "<br>TNotas: " + nota1 + "," + nota2 + " e " + nota3 + "<br>Média final:" + mediaaluno + "<br>Sua situação atual: " + retorno;
+        </script>
+</body>
+</html>
